@@ -1,0 +1,15 @@
+<h1>Blog posts</h1>
+
+<!-- This is a comment in HTML -->
+
+There are a total of <%= @blog_posts.count %> posts.
+
+<% @blog_posts.each do |blog_post| %>
+
+  <h2><%= blog_post.id %> - <%= blog_post.title %></h2>
+
+  <p>
+    <%= blog_post.body %>
+  </p>
+
+<% end %>
