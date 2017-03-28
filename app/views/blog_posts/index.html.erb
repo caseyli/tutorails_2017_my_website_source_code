@@ -4,12 +4,14 @@
 
 There are a total of <%= @blog_posts.count %> posts.
 
+<a href='/blog_posts/new'>Add new blog post</a>
+
 <% @blog_posts.each do |blog_post| %>
 
   <h2><%= blog_post.id %> - <%= blog_post.title %></h2>
 
   <p>
-    <%= blog_post.body %>
+    <a href='/blog_posts/<%= blog_post.id %>'>View Details</a>
   </p>
 
 <% end %>
